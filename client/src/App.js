@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  // Route
+} from "react-router-dom";
+
+// import MessageList from "./components/MessageList";
+// import MessageForm from "./components/MessageForm";
+import Navigation from "./components/Navbar";
+
+import "bootswatch/dist/quartz/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navigation />
+      <div className="container p-4">
+        <Routes>
+          {/* <Route path="/" element={<MessageList />} /> */}
+          {/* <Route path="/new-message" element={<MessageForm />} /> */}
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
